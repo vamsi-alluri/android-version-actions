@@ -15,8 +15,14 @@ inputs:
     description: "Integer value to increment the existing version code by (e.g., 1)"
     required: false
   SemanticVersioningOptionToIncrement:
-    description: "The part of the semantic version to increment ('major', 'minor', or 'patch')"
-    required: false
+        description: 'Version increment type, expects there exists a valid semantic versioning format in versionName. Ignored if versionName is set.'
+        required: true
+        type: choice
+        options:
+        - major
+        - minor
+        - patch
+        default: patch
 outputs:
   result:
     description: "Action Result status"

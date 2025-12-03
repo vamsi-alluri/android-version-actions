@@ -14,8 +14,9 @@ try {
     
     // Increment-based inputs
     const versionCodeIncrementBy = core.getInput('versionCodeIncrementBy');
-    const versionNameIncrementType = core.getInput('SemanticVersioningOptionToIncrement'); // 'major', 'minor', or 'patch'
+    const versionNameIncrementType = core.getInput('SemanticVersioningOptionToIncrement'); // 'major', 'minor', or 'patch' Selected from action.yml
 
+    core.info(`Provided Inputs:`);
     core.info(`Gradle Path: ${gradlePath}`);
     core.info(`Input - specificVersionCode: ${specificVersionCode || 'none'}`);
     core.info(`Input - specificVersionName: ${specificVersionName || 'none'}`);
