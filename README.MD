@@ -1,4 +1,5 @@
 # android-version-action v1.2.2
+
 Override your android version number and version code through github actions
 
 ## Features
@@ -15,7 +16,16 @@ Override your android version number and version code through github actions
 `versionName`
 **Optional**, Version Name to override
 
-## Example
+`versionCodeIncrementBy`
+**Optional**, Value for Version Code to be increased by.
+
+`versionNameIncrement`
+**Optional**, Increases the selected option. [Major, Minor, Patch]
+
+`SemanticVersioningOptionToIncrement`
+**Optional**, Select an option from Major, Minor, or Patch.
+
+## Examples
 ```
 jobs:
   build:
@@ -29,9 +39,10 @@ jobs:
           distribution: 'temurin'
           java-version: 11.0.22+7
       - name: Bump version
-        uses: chkfung/android-version-actions@v1.2.2
+        uses: vamsi-alluri/android-version-actions@v1.2.2
         with:
           gradlePath: app/build.gradle # or app/build.gradle.kts 
           versionCode: ${{github.run_number}}
           versionName: 1.0.0
 ```
+
