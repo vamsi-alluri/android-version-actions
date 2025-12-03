@@ -1,4 +1,4 @@
-# android-version-action v1.2.2
+# android-version-action v0.1.0
 
 Override your android version number and version code through github actions
 
